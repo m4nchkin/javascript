@@ -1,0 +1,15 @@
+let input1 = document.getElementById("age");
+let input2 = document.getElementById("height");
+let input3 = document.getElementById("weight");
+let button = document.querySelector("#caloriesResult");
+
+input3.addEventListener("change", stateHandle);
+input1.addEventListener("change", stateHandle);
+function stateHandle() {
+    if (input1.value !== "" && input2.value !== "" && 
+    input3.value !== "") {
+        button.disabled = false; //button remains enabled
+    } else {
+        button.disabled = true; //button is disabled
+    }
+}
