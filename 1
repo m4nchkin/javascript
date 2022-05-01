@@ -1,0 +1,25 @@
+// let user2 = user
+// user2 = 'Alex'
+// console.log(user2)
+let copyUser = {...user}
+// copyUser.name = user.name
+copyUser.name = 'Alex'
+copyUser.friends.push('Oleg')
+console.log(user)
+console.log(copyUser)
+
+let deepCopy = {...user, friends: [user.friends]}
+
+const students = [
+    {name: 'Alex'},
+    {name: 'Viktor'}
+    ,
+    {name: 'Boris'}
+    ,
+    {name: 'Ilya'}
+    ,
+    {name: 'Daniil'}
+]
+
+let copySt = [...students]//поверхностная копия
+let deepCopy = students.map((st)=>{...st}) // возвращает новый массив
